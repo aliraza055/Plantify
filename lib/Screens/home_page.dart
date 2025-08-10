@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(      
       body: Container(
         color: Colors.blue,
+        child:Column
       ),
     );
   }
