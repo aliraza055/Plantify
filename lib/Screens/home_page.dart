@@ -11,10 +11,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(      
-      body: Container(
-        color: Colors.blue,
-        child:Column
-      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        Text("Heelo")
+      ],),
     );
   }
 }
