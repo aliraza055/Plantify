@@ -12,13 +12,24 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final countP=Provider.of<CounterProvider>(context);
+    print('built all widgets');
+    final countP=Provider.of<CounterProvider>(context,listen: false);
     return Scaffold(      
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+        countP.setCount();
+      }),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-        Center(child: Text(countP.count.toString(),style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),))
+          Consumer<CounterProvider>(
+            builder: (context,value,child){
+              print("only this widget");
+              return Center(child: Text(value.count.toString(),style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),));
+
+            })
       ],),
     );
   }
