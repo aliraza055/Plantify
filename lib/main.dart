@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pantify/Provider/counter_provider.dart';
+import 'package:pantify/Provider/item_provider.dart';
 import 'package:pantify/Provider/loader_provider.dart';
 import 'package:pantify/Provider/slider_provider.dart';
-import 'package:pantify/Screens/login_page.dart';
-import 'package:pantify/Screens/slider_page.dart';
+import 'package:pantify/Screens/items.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,16 +18,15 @@ class MyApp extends StatelessWidget {
       providers:[
        ChangeNotifierProvider(create: (_)=>SliderProvider()),
        ChangeNotifierProvider(create: (_)=>CounterProvider()),
-              ChangeNotifierProvider(create: (_)=>LoaderProvider()),
-
-
+       ChangeNotifierProvider(create: (_)=>LoaderProvider()),
+       ChangeNotifierProvider(create: (_)=>ItemProvider())
       ],
       child: MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginPage(),
+      home: const Items(),
     ),
       );
     

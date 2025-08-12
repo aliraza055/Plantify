@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
      return ElevatedButton(
             child:value.loading ? Center(child: CircularProgressIndicator(),) : Center(child: Text("Log In")) ,
             onPressed: (){
-            value.setLoading(false);
+            provider.setLoading(false);
           },
           
           );
