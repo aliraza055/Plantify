@@ -3,7 +3,7 @@ import 'package:pantify/Provider/item_provider.dart';
 import 'package:provider/provider.dart';
 
 class FavList extends StatefulWidget {
-   FavList({super.key,});
+  const FavList({super.key,});
 
   @override
   State<FavList> createState() => _FavListState();

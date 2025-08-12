@@ -3,7 +3,7 @@ import 'package:pantify/Provider/counter_provider.dart';
 import 'package:pantify/Provider/item_provider.dart';
 import 'package:pantify/Provider/loader_provider.dart';
 import 'package:pantify/Provider/slider_provider.dart';
-import 'package:pantify/Screens/items.dart';
+import 'package:pantify/Screens/explore_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Items(),
+      home: const ExplorePage(),
     ),
       );
     
