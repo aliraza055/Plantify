@@ -21,6 +21,7 @@ class _ExplorePageState extends State<ExplorePage> {
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50)
+    
                   )     
               ),              
               height: _height/3,
