@@ -14,12 +14,23 @@ class _ExplorePageState extends State<ExplorePage> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.green
+          Stack(
+            children:[Container(
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50)
+                  )     
+              ),
+              
+              height: _height/3,
             ),
-            height: _height/3,
-          )
+          Container(
+            height: 50,
+            color: Colors.red,
+            child: TextField())
+        ])
         ],
       ),
     );
