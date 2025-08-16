@@ -11,6 +11,8 @@ class _ExplorePageState extends State<ExplorePage> {
   final _height=MediaQuery.of(context).size.height;
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             children:[
@@ -25,18 +27,27 @@ class _ExplorePageState extends State<ExplorePage> {
               height: _height/3,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.only(left: 20,top: 40),
+                padding: const EdgeInsets.only(left: 20,top: 40,right: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  Text("ali raza",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
+                    Image.asset('images/icon_4.png',height: 50,width: 50,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      Text('Hi ,Ali Raza!',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                                          Image.asset('images/icon_4.png',height: 50,width: 50,),
+
+
+                      ],
+                    )
                   ],
                 ),
               ),
                           ),
           Container(
-            margin: EdgeInsets.only(top: 220,left: 20,right: 20),
+            margin: EdgeInsets.only(top: _height*0.27,left: 20,right: 20),
             height: 50,
             decoration: BoxDecoration(
              color: Colors.white,
@@ -47,10 +58,43 @@ class _ExplorePageState extends State<ExplorePage> {
               decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(horizontal: 15), 
                 border: InputBorder.none,
-              hint: Text('enter your name')
+              hint: Text('enter your name'),
+               
               ),
             ))
-        ])
+        ]),
+        SizedBox(height: 20,),
+        Padding(
+          padding: const EdgeInsets.only(left: 20,right: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                        Text('Recommended',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 14,vertical: 5),
+                          decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(20)
+                            
+                          ),
+                          child: Text('See all'),
+                        )
+          
+          
+                        ],
+          ),
+        ),
+        SizedBox(height: 20,),
+        Container(
+          height: 200,
+          width: 150,
+          color: Colors.green,
+          child: Column(
+            children: [
+              Image.asset('images/image_1.png',width: 150,height: 150,fit: BoxFit.contain,)
+            ],
+          ),
+        )
         ],
       ),
     );
