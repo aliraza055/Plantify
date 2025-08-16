@@ -6,6 +6,12 @@ class ExplorePage extends StatefulWidget {
   State<ExplorePage> createState() => _ExplorePageState();
 }
 class _ExplorePageState extends State<ExplorePage> {
+  final list=[];
+  @override
+  void initState() {
+    super.initState();
+    
+  }
   @override
   Widget build(BuildContext context) {
   final _height=MediaQuery.of(context).size.height;
@@ -85,14 +91,27 @@ class _ExplorePageState extends State<ExplorePage> {
           ),
         ),
         SizedBox(height: 20,),
-        Container(
-          height: 200,
-          width: 150,
-          color: Colors.green,
-          child: Column(
-            children: [
-              Image.asset('images/image_1.png',width: 150,height: 150,fit: BoxFit.contain,)
-            ],
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Container(
+            color: Colors.white,
+            height: 250,
+            width: 150,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset('images/image_1.png'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("SAMATA"),
+                    Text("RS:500")
+                  ],
+                ),
+                Text('important')
+              ],
+            ),
           ),
         )
         ],
