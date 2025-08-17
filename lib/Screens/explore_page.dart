@@ -46,8 +46,7 @@ class _ExplorePageState extends State<ExplorePage> {
                         children: [
                         Text('Hi ,Ali Raza!',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
                                             Image.asset('images/icon_4.png',height: 50,width: 50,),
-        
-        
+                
                         ],
                       )
                     ],
