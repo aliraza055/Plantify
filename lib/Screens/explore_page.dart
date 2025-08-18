@@ -101,21 +101,20 @@ class _ExplorePageState extends State<ExplorePage> {
                   return Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Container(
-                  color: Colors.amber,
-                  //height: 250,
-                 // width: 150,
+                  color: Colors.white,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                   crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(list[index].image),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(list[index].name),
-                          Text(list[index].price)
+                          // SizedBox(width: 80,),
+                          Text('Rs:${list[index].price}')
                         ],
                       ),
+                      SizedBox(height: 10,),
                       Text(list[index].des)
                     ],
                   ),
