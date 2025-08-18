@@ -110,7 +110,8 @@ class _ExplorePageState extends State<ExplorePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(list[index].name),
-                          // SizedBox(width: 80,),
+                     //     Spacer(),
+                           SizedBox(width: 80,),
                           Text('Rs:${list[index].price}')
                         ],
                       ),
